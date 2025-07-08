@@ -1,0 +1,82 @@
+{
+    "header": {
+        "emergency_flag": false,
+        "content_major_version": 0,
+        "content_minor_version": 0,
+        "app_key": null,
+        "display_type": null,
+        "error_code": "",
+        "error_text": "",
+        "info_text": "",
+        "login_session_id": "",
+        "message_version": "",
+        "result": true,
+        "trcode": "MVP0102",
+        "deploy_type": null,
+        "content_update_flag": false
+    },
+    "body": {
+        "menuList": [
+            {
+                "menuUri": null,
+                "leftMenuYn": "Y",
+                "menuId": "board",
+                "menuSeq": "1",
+                "menuLvl": "1",
+                "adminMenuYn": "N",
+                "upperMenuId": null,
+                "menuName": "게시판"
+            },
+            {
+                "menuUri": "/dashboard",
+                "leftMenuYn": "Y",
+                "menuId": "dashboard",
+                "menuSeq": "1",
+                "menuLvl": "1",
+                "adminMenuYn": "Y",
+                "upperMenuId": null,
+                "menuName": "대시보드"
+            },
+            {
+                "menuUri": "/article_list",
+                "leftMenuYn": "Y",
+                "menuId": "general_board",
+                "menuSeq": "2",
+                "menuLvl": "2",
+                "adminMenuYn": "N",
+                "upperMenuId": "board",
+                "menuName": "일반게시판"
+            },
+            {
+                "menuUri": "/home",
+                "leftMenuYn": "N",
+                "menuId": "home",
+                "menuSeq": "1",
+                "menuLvl": "1",
+                "adminMenuYn": "N",
+                "upperMenuId": null,
+                "menuName": "HOME"
+            },
+            {
+                "menuUri": "/login",
+                "leftMenuYn": "N",
+                "menuId": "login",
+                "menuSeq": "1",
+                "menuLvl": "1",
+                "adminMenuYn": "N",
+                "upperMenuId": null,
+                "menuName": "로그인 화면"
+            },
+            {
+                "menuUri": "/notice_list",
+                "leftMenuYn": "Y",
+                "menuId": "notice",
+                "menuSeq": "1",
+                "menuLvl": "2",
+                "adminMenuYn": "N",
+                "upperMenuId": "board",
+                "menuName": "공지사항"
+            }
+        ]
+    }
+}

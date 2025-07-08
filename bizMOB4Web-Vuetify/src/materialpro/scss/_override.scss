@@ -1,0 +1,39 @@
+html {
+    .bg-success {
+        color: white !important;
+    }
+
+    .bg-primary {
+        color: $white !important;
+    }
+
+    .bg-secondary {
+        color: $white !important;
+    }
+
+    .bg-warning {
+        color: $white !important;
+    }
+}
+
+.border,
+.v-divider {
+    border-color: rgba(var(--v-border-color)) !important;
+}
+.avtar-border {
+    border: 2px solid rgb(var(--v-theme-surface)) !important;
+}
+.subtext{
+    font-size: $font-size-root;
+    line-height: 1.75rem;
+}
+.v-dialog{
+    &.dialog-mw{
+        max-width: 800px;
+    }
+}
+
+// 뷰티파이 사이트의 표기는 1rem인데, 실제로는 0.875rem이라 오버라이딩
+.text-body-1 {
+    font-size: 1rem !important;
+}

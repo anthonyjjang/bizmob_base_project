@@ -1,0 +1,38 @@
+// @font-face {
+//     font-family:"Noto Sans";
+//     font-style: normal;
+//     font-weight: 300;
+//     src: local("Noto Sans"), url("../fonts/NotoSans-Light.ttf") format("truetype");
+// }
+
+// @font-face {
+//     font-family: "Noto Sans";
+//     font-style: normal;
+//     font-weight: normal;
+//     src: local("Noto Sans"), local("Noto-Sans-Regular"), url("../fonts/NotoSans-Regular.ttf") format("truetype");
+// }
+
+// @font-face {
+//     font-family: "Noto Sans";
+//     font-style: normal;
+//     font-weight: 500;
+//     src: local("Noto Sans"), local("Noto-Sans-Medium"), url("../fonts/NotoSans-Medium.ttf") format("truetype");
+// }
+
+// @font-face {
+//     font-family: "Noto Sans";
+//     font-style: normal;
+//     font-weight: 700;
+//     src: local("Noto Sans Bold"), local("Noto-Sans-Bold"), url("../fonts/NotoSans-Bold.ttf") format("truetype");
+// }
+
+// dialog-right-transition 애니메이션 생성
+.dialog-right-transition-enter-active,
+.dialog-right-transition-leave-active {
+    transition: all 0.3s ease;
+}
+.dialog-right-transition-enter-from,
+.dialog-right-transition-leave-to {
+    transform: translateX(100%);
+    opacity: 0;
+}

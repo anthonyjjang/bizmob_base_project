@@ -1,0 +1,153 @@
+{
+    "header": {
+        "result": true,
+        "error_code": "",
+        "error_text": "",
+        "trcode": "mock-DM0002"
+    },
+    "body": {
+        "totalCnt": 30,
+        "list": [
+            {
+                "noticeId": "1",
+                "userGroupId": "101",
+                "userGroupName": "Marketing Team",
+                "emergencyNoticeYn": "Y",
+                "title": "Urgent Meeting",
+                "attachYn": "N",
+                "authorId": "user01",
+                "authorName": "John Doe",
+                "updateDate": "20230701",
+                "activeYn": "N",
+                "startDate": "20230701",
+                "endDate": "20230702"
+            },
+            {
+                "noticeId": "2",
+                "userGroupId": "102",
+                "userGroupName": "Sales Team",
+                "emergencyNoticeYn": "N",
+                "title": "Quarterly Report",
+                "attachYn": "Y",
+                "authorId": "user02",
+                "authorName": "Jane Smith",
+                "updateDate": "20230702",
+                "activeYn": "Y",
+                "startDate": "20230703",
+                "endDate": "20230704"
+            },
+            {
+                "noticeId": "3",
+                "userGroupId": "103",
+                "userGroupName": "HR Team",
+                "emergencyNoticeYn": "N",
+                "title": "Policy Update",
+                "attachYn": "N",
+                "authorId": "user03",
+                "authorName": "Alice Johnson",
+                "updateDate": "20230703",
+                "activeYn": "Y",
+                "startDate": "20230704",
+                "endDate": "20230705"
+            },
+            {
+                "noticeId": "4",
+                "userGroupId": "104",
+                "userGroupName": "IT Team",
+                "emergencyNoticeYn": "Y",
+                "title": "System Maintenance",
+                "attachYn": "Y",
+                "authorId": "user04",
+                "authorName": "Bob Brown",
+                "updateDate": "20230704",
+                "activeYn": "Y",
+                "startDate": "20230705",
+                "endDate": "20230706"
+            },
+            {
+                "noticeId": "5",
+                "userGroupId": "105",
+                "userGroupName": "Finance Team",
+                "emergencyNoticeYn": "N",
+                "title": "Budget Meeting",
+                "attachYn": "N",
+                "authorId": "user05",
+                "authorName": "Charlie Davis",
+                "updateDate": "20230705",
+                "activeYn": "Y",
+                "startDate": "20230706",
+                "endDate": "20230707"
+            },
+            {
+                "noticeId": "6",
+                "userGroupId": "106",
+                "userGroupName": "Operations Team",
+                "emergencyNoticeYn": "N",
+                "title": "Workflow Optimization",
+                "attachYn": "Y",
+                "authorId": "user06",
+                "authorName": "Diana Evans",
+                "updateDate": "20230706",
+                "activeYn": "Y",
+                "startDate": "20230707",
+                "endDate": "20230708"
+            },
+            {
+                "noticeId": "7",
+                "userGroupId": "107",
+                "userGroupName": "Customer Service Team",
+                "emergencyNoticeYn": "Y",
+                "title": "Customer Feedback",
+                "attachYn": "N",
+                "authorId": "user07",
+                "authorName": "Eve Frank",
+                "updateDate": "20230707",
+                "activeYn": "Y",
+                "startDate": "20230708",
+                "endDate": "20230709"
+            },
+            {
+                "noticeId": "8",
+                "userGroupId": "108",
+                "userGroupName": "Legal Team",
+                "emergencyNoticeYn": "N",
+                "title": "Compliance Update",
+                "attachYn": "Y",
+                "authorId": "user08",
+                "authorName": "Frank Green",
+                "updateDate": "20230708",
+                "activeYn": "Y",
+                "startDate": "20230709",
+                "endDate": "20230710"
+            },
+            {
+                "noticeId": "9",
+                "userGroupId": "109",
+                "userGroupName": "PR Team",
+                "emergencyNoticeYn": "Y",
+                "title": "Press Release",
+                "attachYn": "N",
+                "authorId": "user09",
+                "authorName": "Grace Hill",
+                "updateDate": "20230709",
+                "activeYn": "Y",
+                "startDate": "20230710",
+                "endDate": "20230711"
+            },
+            {
+                "noticeId": "10",
+                "userGroupId": "110",
+                "userGroupName": "R&D Team",
+                "emergencyNoticeYn": "N",
+                "title": "Project Kickoff",
+                "attachYn": "Y",
+                "authorId": "user10",
+                "authorName": "Hank Ivers",
+                "updateDate": "20230710",
+                "activeYn": "Y",
+                "startDate": "20230711",
+                "endDate": "20230712"
+            }
+        ]
+    }
+}

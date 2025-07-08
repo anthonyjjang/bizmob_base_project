@@ -1,0 +1,174 @@
+{
+    "header": {
+        "result": true,
+        "error_code": "",
+        "error_text": "",
+        "trcode": "mock-DM9009"
+    },
+    "body": {
+        "userGroupList": [
+            {
+                "userGroupCode": "0",
+                "parentUserGroupLevel": null,
+                "parentUserGroupCode": null,
+                "userGroupName": "조직도",
+                "userGroupDescription": null,
+                "userGroupLevel": "1",
+                "userGroupSortOrder": "1"
+            },
+            {
+                "userGroupCode": "1",
+                "parentUserGroupLevel": "1",
+                "parentUserGroupCode": "0",
+                "userGroupName": "(주)모빌씨앤씨 본사",
+                "userGroupDescription": null,
+                "userGroupLevel": "2",
+                "userGroupSortOrder": "1"
+            },
+            {
+                "userGroupCode": "2",
+                "parentUserGroupLevel": "2",
+                "parentUserGroupCode": "1",
+                "userGroupName": "대표이사",
+                "userGroupDescription": null,
+                "userGroupLevel": "3",
+                "userGroupSortOrder": "1"
+            },
+            {
+                "userGroupCode": "3",
+                "parentUserGroupLevel": "2",
+                "parentUserGroupCode": "1",
+                "userGroupName": "전략사업부문",
+                "userGroupDescription": null,
+                "userGroupLevel": "3",
+                "userGroupSortOrder": "1"
+            },
+            {
+                "userGroupCode": "4",
+                "parentUserGroupLevel": "2",
+                "parentUserGroupCode": "1",
+                "userGroupName": "국내사업본부",
+                "userGroupDescription": null,
+                "userGroupLevel": "3",
+                "userGroupSortOrder": "1"
+            },
+            {
+                "userGroupCode": "5",
+                "parentUserGroupLevel": "3",
+                "parentUserGroupCode": "4",
+                "userGroupName": "경영전략팀",
+                "userGroupDescription": null,
+                "userGroupLevel": "4",
+                "userGroupSortOrder": "1"
+            },
+            {
+                "userGroupCode": "6",
+                "parentUserGroupLevel": "3",
+                "parentUserGroupCode": "4",
+                "userGroupName": "UX팀",
+                "userGroupDescription": null,
+                "userGroupLevel": "4",
+                "userGroupSortOrder": "1"
+            },
+            {
+                "userGroupCode": "7",
+                "parentUserGroupLevel": "3",
+                "parentUserGroupCode": "4",
+                "userGroupName": "사업1팀",
+                "userGroupDescription": null,
+                "userGroupLevel": "4",
+                "userGroupSortOrder": "1"
+            },
+            {
+                "userGroupCode": "8",
+                "parentUserGroupLevel": "3",
+                "parentUserGroupCode": "4",
+                "userGroupName": "사업2팀",
+                "userGroupDescription": null,
+                "userGroupLevel": "4",
+                "userGroupSortOrder": "1"
+            },
+            {
+                "userGroupCode": "9",
+                "parentUserGroupLevel": "3",
+                "parentUserGroupCode": "4",
+                "userGroupName": "전략운영팀",
+                "userGroupDescription": null,
+                "userGroupLevel": "4",
+                "userGroupSortOrder": "1"
+            },
+            {
+                "userGroupCode": "10",
+                "parentUserGroupLevel": "3",
+                "parentUserGroupCode": "4",
+                "userGroupName": "전략채널팀",
+                "userGroupDescription": null,
+                "userGroupLevel": "4",
+                "userGroupSortOrder": "1"
+            },
+            {
+                "userGroupCode": "11",
+                "parentUserGroupLevel": "2",
+                "parentUserGroupCode": "1",
+                "userGroupName": "보안팀",
+                "userGroupDescription": null,
+                "userGroupLevel": "3",
+                "userGroupSortOrder": "1"
+            },
+            {
+                "userGroupCode": "12",
+                "parentUserGroupLevel": null,
+                "parentUserGroupCode": null,
+                "userGroupName": "사용자 그룹",
+                "userGroupDescription": null,
+                "userGroupLevel": "1",
+                "userGroupSortOrder": "1"
+            },
+            {
+                "userGroupCode": "13",
+                "parentUserGroupLevel": "1",
+                "parentUserGroupCode": "12",
+                "userGroupName": "직무 그룹",
+                "userGroupDescription": null,
+                "userGroupLevel": "2",
+                "userGroupSortOrder": "1"
+            },
+            {
+                "userGroupCode": "14",
+                "parentUserGroupLevel": "2",
+                "parentUserGroupCode": "13",
+                "userGroupName": "서버파트",
+                "userGroupDescription": null,
+                "userGroupLevel": "3",
+                "userGroupSortOrder": "1"
+            },
+            {
+                "userGroupCode": "15",
+                "parentUserGroupLevel": "2",
+                "parentUserGroupCode": "13",
+                "userGroupName": "클라이언트파트",
+                "userGroupDescription": null,
+                "userGroupLevel": "3",
+                "userGroupSortOrder": "1"
+            },
+            {
+                "userGroupCode": "16",
+                "parentUserGroupLevel": "2",
+                "parentUserGroupCode": "13",
+                "userGroupName": "네이티브파트",
+                "userGroupDescription": null,
+                "userGroupLevel": "3",
+                "userGroupSortOrder": "1"
+            },
+            {
+                "userGroupCode": "17",
+                "parentUserGroupLevel": "1",
+                "parentUserGroupCode": "12",
+                "userGroupName": "(관리자 생성)AI TF",
+                "userGroupDescription": null,
+                "userGroupLevel": "2",
+                "userGroupSortOrder": "1"
+            }
+        ]
+    }
+}
