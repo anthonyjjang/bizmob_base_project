@@ -1,0 +1,18 @@
+{
+    "header": {
+        "result": true,
+        "error_code": "",
+        "error_text": "",
+        "trcode": "mock-DM0003"
+    },
+    "body": {
+        "regDate": "20200318 171000",
+        "regName": "mobile",
+        "targetCode": "NT01",
+        "targetName": "System",
+        "categoryCode": "NC01",
+        "categoryName": "시스템",
+        "title": "서비스 점검 안내 1",
+        "content": "안정된 서비스 제공을 위해 App 서비스 점검 작업이 금일 22:00에 진행될 예정입니다.\n신속히 점검하여 보다 나은 서비스로 보답하겠습니다.\n감사합니다."
+    }
+}

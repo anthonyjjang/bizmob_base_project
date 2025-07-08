@@ -1,0 +1,102 @@
+{
+    "header": {
+        "result": true,
+        "error_code": "",
+        "error_text": "",
+        "trcode": "mock-DM0002"
+    },
+    "body": {
+        "totalCnt": 30,
+        "list": [{
+            "regDate": "20200318 171000",
+            "regName": "mobile",
+            "targetCode": "NT01",
+            "targetName": "System",
+            "categoryCode": "NC01",
+            "categoryName": "시스템",
+            "title": "서비스 점검 안내 1",
+            "boardSeq": "BS0000000001"
+        }, {
+            "regDate": "20200318 171000",
+            "regName": "mobile",
+            "targetCode": "NT01",
+            "targetName": "System",
+            "categoryCode": "NC01",
+            "categoryName": "시스템",
+            "title": "서비스 점검 안내 2",
+            "boardSeq": "BS0000000002"
+        }, {
+            "regDate": "20200318 171000",
+            "regName": "mobile",
+            "targetCode": "NT01",
+            "targetName": "System",
+            "categoryCode": "NC01",
+            "categoryName": "시스템",
+            "title": "서비스 점검 안내 3",
+            "boardSeq": "BS0000000003"
+        }, {
+            "regDate": "20200418 171000",
+            "regName": "system",
+            "targetCode": "NT02",
+            "targetName": "Admin",
+            "categoryCode": "NC11",
+            "categoryName": "프로모션",
+            "title": "프로모션 진행 안내 1",
+            "boardSeq": "BS0000000011"
+        }, {
+            "regDate": "20200418 171000",
+            "regName": "system",
+            "targetCode": "NT02",
+            "targetName": "Admin",
+            "categoryCode": "NC11",
+            "categoryName": "프로모션",
+            "title": "프로모션 진행 안내 2",
+            "boardSeq": "BS0000000012"
+        }, {
+            "regDate": "20200418 171000",
+            "regName": "system",
+            "targetCode": "NT02",
+            "targetName": "Admin",
+            "categoryCode": "NC11",
+            "categoryName": "프로모션",
+            "title": "프로모션 진행 안내 3",
+            "boardSeq": "BS0000000013"
+        }, {
+            "regDate": "20200528 171012",
+            "regName": "admin",
+            "targetCode": "NT03",
+            "targetName": "User",
+            "categoryCode": "NC21",
+            "categoryName": "이벤트",
+            "title": "이벤트 안내 1",
+            "boardSeq": "BS0000000021"
+        }, {
+            "regDate": "20200528 171012",
+            "regName": "admin",
+            "targetCode": "NT03",
+            "targetName": "User",
+            "categoryCode": "NC21",
+            "categoryName": "이벤트",
+            "title": "이벤트 안내 2",
+            "boardSeq": "BS0000000021"
+        }, {
+            "regDate": "20200528 171012",
+            "regName": "admin",
+            "targetCode": "NT03",
+            "targetName": "User",
+            "categoryCode": "NC21",
+            "categoryName": "이벤트",
+            "title": "이벤트 안내 3",
+            "boardSeq": "BS0000000021"
+        }, {
+            "regDate": "20200528 171012",
+            "regName": "admin",
+            "targetCode": "NT03",
+            "targetName": "User",
+            "categoryCode": "NC21",
+            "categoryName": "이벤트",
+            "title": "이벤트 안내 4",
+            "boardSeq": "BS0000000021"
+        }]
+    }
+}

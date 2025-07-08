@@ -1,0 +1,44 @@
+{
+    "compilerOptions": {
+        "target": "ES5", // 컴파일된 JavaScript 코드가 호환될 ECMAScript 버전을 지정합니다. "ES5"는 오래된 브라우저와의 호환성을 위해 사용됩니다.
+        "module": "esnext", // 생성된 코드의 모듈 시스템을 지정합니다. "esnext"는 가장 최신의 ECMAScript 모듈 기능을 사용합니다.
+        "strict": true, // 모든 엄격한 타입 검사 옵션을 활성화합니다. 코드의 안정성을 높이기 위해 권장됩니다.
+        "jsx": "preserve", // JSX 코드 처리 방식을 지정합니다. "preserve"는 JSX 코드를 변경하지 않고 출력합니다(React와 함께 사용할 때 유용).
+        "moduleResolution": "node", // 모듈 해석 전략을 지정합니다. "node"는 Node.js의 모듈 해석 방식을 따릅니다.
+        "skipLibCheck": true, // 선언 파일(`*.d.ts`)의 타입 검사를 건너뜁니다. 빌드 시간을 단축시킬 수 있습니다.
+        "esModuleInterop": true, // CommonJS 모듈과 ES 모듈 간의 호환성을 개선합니다. 기본 import 문법을 사용할 수 있게 합니다.
+        "allowSyntheticDefaultImports": true, // 실제로는 default export가 없는 모듈에서 default import를 허용합니다. "esModuleInterop"와 관련이 깊습니다.
+        "forceConsistentCasingInFileNames": true, // 파일 이름의 대소문자 일관성을 강제합니다. 이는 일관성 없는 참조로 인한 문제를 방지합니다.
+        "useDefineForClassFields": true, // 클래스 필드를 정의할 때 `defineProperty`를 사용합니다. 클래스 필드의 동작을 명확하게 합니다.
+        "resolveJsonModule": true, // JSON 파일을 모듈로 임포트할 수 있게 합니다.
+        "sourceMap": true, // 소스 맵을 생성합니다. 디버깅 시 원본 TypeScript 파일을 참조할 수 있게 해 줍니다.
+        "downlevelIteration": true, // 낮은 버전의 JavaScript 대상으로 컴파일할 때 반복자와 생성기에 대한 전체 지원을 활성화합니다.
+        "baseUrl": ".", // 비상대적 모듈 이름을 해석할 기준 디렉토리를 설정합니다. "."은 현재 디렉토리를 의미합니다.
+        "types": [
+            "webpack-env",
+            "node"
+        ],
+        "paths": {
+        "@/*": [
+            "src/*"
+        ]
+        },
+        "lib": [
+            "ES5",
+            "dom",
+            "dom.iterable",
+            "scripthost"
+        ]
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.d.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue",
+        "tests/**/*.ts",
+        "tests/**/*.tsx"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
