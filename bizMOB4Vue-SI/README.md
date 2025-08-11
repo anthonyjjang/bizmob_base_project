@@ -1,81 +1,176 @@
-# bizMOB4 Base Project
+# bizMOB4Vue-SI Base Project
 
-## NODE_ENV (실행 환경)
+Vue.js 3와 Ionic를 기반으로 한 모바일 하이브리드 애플리케이션 베이스 프로젝트입니다. bizMOB 플랫폼을 위한 TypeScript 기반의 엔터프라이즈급 앱 개발을 지원합니다.
+
+## 📋 프로젝트 개요
+
+- **프레임워크**: Vue 3 (Composition API) + Ionic Vue
+- **언어**: TypeScript
+- **상태 관리**: Vuex 4
+- **라우팅**: Vue Router 4
+- **국제화**: Vue i18n
+- **빌드 도구**: Vue CLI 5
+- **스타일링**: SCSS + Ionic CSS Components
+- **대상 환경**: 모바일 하이브리드 앱 (iOS/Android) 및 웹
+
+## 🚀 주요 기능
+
+- **bizMOB 플랫폼 통합**: 네이티브 기능 접근을 위한 TypeScript Wrapper
+- **다중 환경 지원**: 개발(SIT), 품질(UAT), 운영(PROD) 환경별 설정
+- **JWT 토큰 기반 인증**: 자동 토큰 재발행 및 보안 통신
+- **암호화 통신**: 서버와의 안전한 데이터 통신
+- **다국어 지원**: i18n을 통한 국제화
+- **Mock 데이터**: 개발 단계에서 API 없이 개발 가능
+- **Proxy 서버**: 개발 시 CORS 문제 해결
+
+## 🛠️ 기술 스택
+
+### Core
+- Vue.js 3.5.13
+- TypeScript 5.4.5
+- Ionic Vue 8.5.6
+
+### 상태 관리 & 라우팅
+- Vuex 4.1.0 (상태 관리)
+- Vue Router 4.5.1 (라우팅)
+- vuex-persistedstate 4.1.0 (상태 영속화)
+
+### 유틸리티 라이브러리
+- crypto-js 4.2.0 (암호화)
+- moment 2.30.1 (날짜 처리)
+- dompurify 3.1.5 (XSS 보안)
+- url-safe-base64 1.3.0 (Base64 인코딩)
+
+## 📁 프로젝트 구조
+
+```
+bizMOB4Vue-SI/
+├── public/                     # 정적 파일
+│   ├── bizMOB/                # bizMOB 플랫폼 라이브러리
+│   ├── extlib/                # 외부 라이브러리
+│   ├── mock/                  # Mock 데이터
+│   └── fonts/                 # 폰트 파일
+├── src/
+│   ├── components/            # 재사용 가능한 컴포넌트
+│   ├── views/                 # 페이지 컴포넌트
+│   ├── router/                # 라우터 설정
+│   ├── store/                 # Vuex 스토어
+│   ├── bizMOB/               # bizMOB TypeScript Wrapper
+│   │   ├── Xross/            # bizMOB API 클래스
+│   │   └── BzClass/          # 유틸리티 클래스
+│   ├── shared/               # 공통 유틸리티
+│   ├── locales/              # 다국어 파일
+│   └── assets/               # 정적 리소스
+└── dist/                     # 빌드 결과물
+```
+
+## ⚙️ 환경 설정
+
+### NODE_ENV (실행 환경)
 
 - **development**: `develop 환경`이며 디버깅과 로깅을 활성화한 develop 환경 (개발 서버와는 연관 없음)
 - **production**: `release 환경`으로 최적화와 보안을 강화한 운영 환경 (운영 서버와는 연관 없음)
 
-## 기본 환경 변수
+### 기본 환경 변수
 
 - **.env**: 모든 서버 환경에서 공통적으로 선언될 환경 변수
 - **.env.sit**: `개발 서버` 환경 변수
 - **.env.uat**: `품질 서버` 환경 변수
 - **.env.prod**: `운영 서버` 환경 변수
 
-## 개발용 웹 서버 실행 명령어
+## 🚀 시작하기
 
-deploy 명령어로 실행시 NODE_ENV가 production로 설정되기 때문에 소스 수정시 반영이 오래걸림
+### 설치
 
-- 개발 서버 develop 환경 실행: **npm run serve-sit**
-- 품질 서버 develop 환경 실행: **npm run serve-uat**
-- 운영 서버 develop 환경 실행: **npm run serve-prod**
+```bash
+# 의존성 설치
+npm install
+```
 
-- 개발 서버 release 환경 실행: **npm run serve-sit:deploy**
-- 품질 서버 release 환경 실행: **npm run serve-uat:deploy**
-- 운영 서버 release 환경 실행: **npm run serve-prod:deploy**
+### 개발 서버 실행
 
-## 앱 컨텐츠 배포용 명령어
+> **참고**: deploy 명령어는 NODE_ENV가 production으로 설정되어 소스 수정 시 반영이 오래 걸립니다.
 
-마이너 배포 명령어는 컨텐츠 빌드 후에 font 폴더만 제거된 결과물
+#### Development 모드 (빠른 개발)
+```bash
+# 개발 서버 (SIT)
+npm run serve-sit
 
-- 개발 메이저 배포시: **npm run build-sit:major**
-- 품질 메이저 배포시: **npm run build-uat:major**
-- 운영 메이저 배포시: **npm run build-prod:major**
+# 품질 서버 (UAT)  
+npm run serve-uat
 
-- 개발 마이너 배포시: **npm run build-dev:minor**
-- 품질 마이너 배포시: **npm run build-uat:minor**
-- 운영 마이너 배포시: **npm run build-prod:minor**
+# 운영 서버 (PROD)
+npm run serve-prod
+```
 
-## 기본 실행 명령어
+#### Production 모드 (배포 테스트)
+```bash
+# 개발 서버 release 모드
+npm run serve-sit:deploy
 
-- npm run serve-sit : .env.sit | develop 환경 | 프록시 서버 on
-- npm run serve-sit:deploy : .env.sit | release 환경 | 프록시 서버 on
+# 품질 서버 release 모드
+npm run serve-uat:deploy
 
----
+# 운영 서버 release 모드
+npm run serve-prod:deploy
+```
 
-- npm run serve-uat : .env.uat | develop 환경 | 프록시 서버 on
-- npm run serve-uat:deploy : .env.uat | release 환경 | 프록시 서버 on
+### 빌드
 
----
+#### 메이저 빌드 (전체 리소스 포함)
+```bash
+# 개발 환경 빌드
+npm run build-sit:major
 
-- npm run serve-prod : .env.prod | develop 환경 | 프록시 서버 on
-- npm run serve-prod:deploy : .env.prod | release 환경 | 프록시 서버 on
+# 품질 환경 빌드  
+npm run build-uat:major
 
----
+# 운영 환경 빌드
+npm run build-prod:major
+```
 
-- npm run build-sit:major : .env.sit | release 환경 | 메이저 컨텐츠 build
-- npm run build-sit:minor : .env.sit | release 환경 | 마이너 컨텐츠 build
+#### 마이너 빌드 (폰트 제외)
+```bash
+# 개발 환경 마이너 빌드
+npm run build-sit:minor
 
----
+# 품질 환경 마이너 빌드
+npm run build-uat:minor
 
-- npm run build-uat:major : .env.uat | release 환경 | 메이저 컨텐츠 build
-- npm run build-uat:minor : .env.uat | release 환경 | 마이너 컨텐츠 build
+# 운영 환경 마이너 빌드
+npm run build-prod:minor
+```
 
----
+### 명령어 참조표
 
-- npm run build-prod:major : .env.prod | release 환경 | 메이저 컨텐츠 build
-- npm run build-prod:minor : .env.prod | release 환경 | 마이너 컨텐츠 build
+| 명령어 | 환경파일 | NODE_ENV | 프록시 | 설명 |
+|--------|----------|----------|---------|------|
+| `serve-sit` | .env.sit | development | ON | 개발서버 개발모드 |
+| `serve-sit:deploy` | .env.sit | production | ON | 개발서버 배포모드 |
+| `serve-uat` | .env.uat | development | ON | 품질서버 개발모드 |
+| `serve-uat:deploy` | .env.uat | production | ON | 품질서버 배포모드 |
+| `serve-prod` | .env.prod | development | ON | 운영서버 개발모드 |
+| `serve-prod:deploy` | .env.prod | production | ON | 운영서버 배포모드 |
+| `build-*:major` | .env.* | production | - | 메이저 빌드 (전체) |
+| `build-*:minor` | .env.* | production | - | 마이너 빌드 (폰트 제외) |
 
-## 개발시 주의 사항
+## ⚠️ 개발 시 주의사항
 
-- 웹페이지 B2C 개발시 SEO 고려해야 함
+### 브라우저 호환성
+- **모바일 ES5 지원**: iOS 13 미만 기기에서 ES5 호환성 확인 필요
+- ES6 전용 라이브러리 사용 시 폴리필 또는 대체 패키지 검토
 
-- 외부 라이브러리를 사용할 때, ES5 까지만 지원하는 모바일에서 추가 확인 필요 (iOS 13 미만)
-  - 기본적으로 ES5 타겟으로 빌드시 빌드가 되지만 ES6만 지원하고 ES5 지원은 없거나 다른 패키지를 import 해야할 수도 있음
+### SEO 고려사항
+- B2C 웹 개발 시 검색 엔진 최적화 고려
+- 메타 태그, 구조화된 데이터 적용
 
-## bizMOB Typescript Class
+### 보안
+- 암호화 키, API 키 등 민감정보는 환경변수로 관리
+- XSS 방지를 위해 DOMPurify 사용
 
-javaScript로 구현된 bizMOB 서비스를 Typescript 형식으로 사용할 수 있도록 하는 Adapter
+## 🔧 bizMOB TypeScript API
+
+JavaScript로 구현된 bizMOB 서비스를 TypeScript에서 사용할 수 있도록 하는 Wrapper 클래스입니다.
 
 ```ts
 import File from '@/bizMOB/Xross/File';
@@ -91,40 +186,43 @@ const onBizMOB = async() => {
 };
 ```
 
-### Mock 데이터 호출
+### 🧪 Mock 데이터 사용
 
-- API 호출시 `_bMock: true`로 요청
+개발 단계에서 실제 서버 없이 개발할 수 있도록 Mock 데이터를 제공합니다.
 
 ```ts
 import Network from '@/bizMOB/Xross/Network';
 
-const onBizMOBReqTr = async() => {
+const fetchData = async() => {
     const res: any = await Network.requestTr({
-        _bMock: true, // mock 데이터 호출 여부
+        _bMock: true, // Mock 데이터 사용
         _sTrcode: 'DM0002',
         _oBody: {
             startIndex: 0,
             endIndex: 9
         },
     });
-
     console.log(res);
 };
 ```
 
-- Network Mock 데이터 위치: `public/mock/[Trcode].json`
-- Native API Mock 데이터 위치: `public/mock/bizMOB/**/*.json`
+**Mock 데이터 위치**
+- **Network API**: `public/mock/[Trcode].json`
+- **Native API**: `public/mock/bizMOB/**/*.json`
 
-### bizMOB JWT Token 통신
+### 🔐 JWT 토큰 인증
 
-- JWT Token을 이용한 인증 방식과 연관된 기능
-- 서버에서 Session과 Token 방식 중에서 **Token 방식**을 이용시 사용
-- 일반 전문 호출시 JWT Token과 관련된 에러코드 추가됨
-  - **ERR000**: Access Token 검증 실패. Token 재발행 필요 (renewToken)
-- **Token 방식에서 재발행과 관련된 기능을 사용할 경우 동시 통신에서 재발행 로직 구현시 주의 필요**
-  - Access Token이 만료된 상태에서 3개의 전문을 동시에 호출시.
-  - Access Token 재발행 통신을 3번 호출시 모두 새로 재발행 되며, 3개 모두 유효한 토큰
-  - 프로젝트 상황에 맞춰서 로직 개발
+서버와의 안전한 인증을 위해 JWT 토큰 방식을 지원합니다.
+
+#### 주요 특징
+- **자동 토큰 재발행**: 토큰 만료 시 자동으로 갱신
+- **동시 요청 처리**: 여러 API 동시 호출 시 토큰 재발행 중복 방지
+- **에러 코드**: `ERR000` - Access Token 검증 실패
+
+#### ⚠️ 동시 통신 주의사항
+토큰 만료 상태에서 여러 API를 동시 호출하는 경우:
+- 토큰 재발행이 중복 실행될 수 있음
+- 프로젝트 요구사항에 맞게 재발행 로직 구현 필요
 
 ```ts
 // JWT Token 초기화
@@ -198,19 +296,30 @@ const sample = () => {
 };
 ```
 
-### bizMOB 암호화 통신
+### 🔒 암호화 통신
 
-- 서버 통신시 Body 데이터 암호화와 연관된 기능
-- Web과 App에서 암호화 통신을 하는 방법에 차이가 있음
-  - **App**: `public/bizMOB/app.config`파일의 `ENCRYPTION_USE`를 true로 설정 (운영, 품질, 개발 별도로 존재)
-  - **Web**: `.env.{개발환경}` 파일에 있는 `VUE_APP_ENCRYPTION_USE`를 `'true'` 로 설정 후 **암호화 관련 로직** 추가
-- 일반 전문 호출시 암호화 통신과 관련된 에러코드 추가됨
-  - **EAH000**: 서버의 암호키 세션이 만료. 키 재발급 필요 (shareAuthKey)
-  - **EAH001**: 서버의 암호화 인증 토큰 만료. 토큰 재발행 필요 (renewAuthToken)
-- **암호화 통신 기능에서 인증 토큰 재발행과 관련된 기능을 사용할 경우 동시 통신에서 재발행 로직 구현시 주의 필요**
-  - Auth Token이 만료된 상태에서 3개의 전문을 동시에 호출시.
-  - Auth Token 재발행을 3번 호출시 모두 새로 재발행 되며, 3개 모두 유효한 토큰
-  - 프로젝트 상황에 맞춰서 로직 개발
+서버와의 Body 데이터 암호화를 지원합니다.
+
+#### 암호화 활성화 방법
+
+**App 환경**
+```
+public/bizMOB/app.config
+ENCRYPTION_USE = true
+```
+
+**Web 환경**  
+```
+.env.{환경}
+VUE_APP_ENCRYPTION_USE = 'true'
+```
+
+#### 에러 코드
+- **EAH000**: 암호키 세션 만료 → `shareAuthKey` 호출 필요
+- **EAH001**: 암호화 인증 토큰 만료 → `renewAuthToken` 호출 필요
+
+#### ⚠️ 동시 통신 주의사항
+JWT 토큰과 동일하게 동시 요청 시 토큰 재발행 중복 실행 가능
 
 ```ts
 // 키 초기화
@@ -389,10 +498,9 @@ const processSample = async () => {
 };
 ```
 
-### bizMOB Native i18n 값 셋팅
+### 🌐 다국어 (i18n) 설정
 
-- 다국어 처리를 해야 하는 경우 bizMOB의 `BzLocale`를 통해서 Native의 다국어 코드를 수정할 수 있음
-- 초기화를 해야 할 경우 `BzLocale`의 `initLocale` 호출
+bizMOB의 `BzLocale` 클래스를 통해 네이티브 앱의 다국어를 제어할 수 있습니다.
 
 ```ts
 // App.vue
@@ -410,135 +518,114 @@ const init = () => {
 };
 ```
 
-- 언어를 변경해야 할 경우 `BzLocale`의 `changeLocale` 호출
+#### 언어 변경
 
 ```ts
-// README.vue
 import BzLocale from '@/bizMOB/BzClass/BzLocale';
 
-const onLocale = async() => {
-    // 언어 코드에 따른 full code 프리셋은 public/bizMOB/bizMOB-locale.js에 작성되어 있음
-    BzLocale.changeLocale('ko-KR'); // 또는 'ko' (프리셋에 등록되어 있어야 함.)
-
-    console.log(await BzLocale.getLocale()); // {result: true, locale: 'ko-KR'}
+const changeLanguage = async() => {
+    // 언어 코드 프리셋: public/bizMOB/bizMOB-locale.js
+    await BzLocale.changeLocale('ko-KR'); // 또는 'ko'
+    
+    const result = await BzLocale.getLocale();
+    console.log(result); // {result: true, locale: 'ko-KR'}
 };
 ```
 
-### 클래스별 지원 함수
+## 📚 bizMOB API 레퍼런스
 
-```plaintext
-src/
-└ bizMOB/
-    └ Xross/
-        ├─ App.ts
-        │     callPlugIn
-        │     exit
-        │     getTimeout
-        │     setTimeout
-        │     hideSplash
-        │
-        ├─ Config.ts
-        │     get
-        │     set
-        │
-        ├─ Contacts.ts
-        │     get
-        │
-        ├─ Database.ts
-        │     beginTransaction
-        │     closeDatabase
-        │     commitTransaction
-        │     executeBatchSql
-        │     executeSelect
-        │     executeSql
-        │     openDatabase
-        │     rollbackTransaction
-        │
-        ├─ Device.ts
-        │     getInfo
-        │     isApp
-        │     isWeb
-        │     isMobile
-        │     isPC
-        │     isAndroid
-        │     isIOS
-        │     isTablet
-        │     isPhone
-        │
-        ├─ Event.ts
-        │     setEvent
-        │     clearEvent
-        │
-        ├─ File.ts
-        │     copy
-        │     directory
-        │     download
-        │     exist
-        │     getInfo
-        │     move
-        │     open
-        │     remove
-        │     resizeImage
-        │     rotateImage
-        │     unzip
-        │     upload
-        │     zip
-        │
-        ├─ Localization.ts
-        │     getLocale
-        │     setLocale
-        │
-        ├─ Logger.ts
-        │     info
-        │     log
-        │     warn
-        │     debug
-        │     error
-        │
-        ├─ Network.ts
-        │     changeLocale
-        │     requestLogin
-        │     requestTr
-        │     requestHttp
-        │     requestApi
-        │
-        ├─ Properties.ts
-        │     get
-        │     remove
-        │     set
-        │     setList
-        │
-        ├─ Push.ts
-        │     getAlarm
-        │     getMessageList
-        │     getPushKey
-        │     getUnreadCount
-        │     readMessage
-        │     readReceiptMessage
-        │     registerToServer
-        │     reset
-        │     sendMessage
-        │     setAlarm
-        │     setBadgeCount
-        │
-        ├─ Storage.ts
-        │     get
-        │     remove
-        │     set
-        │     setList
-        │
-        ├─ System.ts
-        │     callBrowser
-        │     callCamera
-        │     callGallery
-        │     callMap
-        │     callSMS
-        │     callTEL
-        │     getGPS
-        │
-        └─ Window.ts
-               openSignPad
-               openCodeReader
-               openFileExplorer
-               openImageViewer
+### 🔧 App (애플리케이션 제어)
+```ts
+import App from '@/bizMOB/Xross/App';
 ```
+- `callPlugIn()` - 플러그인 호출
+- `exit()` - 앱 종료
+- `getTimeout()` / `setTimeout()` - 타임아웃 관리
+- `hideSplash()` - 스플래시 화면 숨기기
+
+### 🌐 Network (네트워크 통신)
+```ts
+import Network from '@/bizMOB/Xross/Network';
+```
+- `requestLogin()` - 로그인 요청
+- `requestTr()` - 트랜잭션 요청
+- `requestHttp()` - HTTP 요청
+- `requestApi()` - API 요청
+
+### 💾 Database (데이터베이스)
+```ts
+import Database from '@/bizMOB/Xross/Database';
+```
+- `openDatabase()` / `closeDatabase()` - DB 연결 관리
+- `executeSql()` / `executeSelect()` - SQL 실행
+- `beginTransaction()` / `commitTransaction()` / `rollbackTransaction()` - 트랜잭션 관리
+
+### 📁 File (파일 관리)
+```ts
+import File from '@/bizMOB/Xross/File';
+```
+- `copy()` / `move()` / `remove()` - 파일 조작
+- `download()` / `upload()` - 파일 전송
+- `zip()` / `unzip()` - 압축 관리
+- `resizeImage()` / `rotateImage()` - 이미지 처리
+
+### 📱 System (시스템 기능)
+```ts
+import System from '@/bizMOB/Xross/System';
+```
+- `callCamera()` / `callGallery()` - 카메라/갤러리
+- `callTEL()` / `callSMS()` - 전화/SMS
+- `callBrowser()` / `callMap()` - 브라우저/지도
+- `getGPS()` - GPS 위치
+
+### 🔔 Push (푸시 알림)
+```ts
+import Push from '@/bizMOB/Xross/Push';
+```
+- `registerToServer()` - 서버 등록
+- `sendMessage()` / `getMessageList()` - 메시지 관리
+- `setAlarm()` / `getAlarm()` - 알람 설정
+
+### 📲 Device (디바이스 정보)
+```ts
+import Device from '@/bizMOB/Xross/Device';
+```
+- `getInfo()` - 디바이스 정보
+- `isApp()` / `isWeb()` - 플랫폼 판별
+- `isAndroid()` / `isIOS()` - OS 판별
+- `isMobile()` / `isPC()` - 디바이스 타입
+
+### 💾 Storage & Properties (저장소)
+```ts
+import Storage from '@/bizMOB/Xross/Storage';
+import Properties from '@/bizMOB/Xross/Properties';
+```
+- `get()` / `set()` / `remove()` - 데이터 관리
+- `setList()` - 배열 데이터 저장
+
+### 🪟 Window (UI 컴포넌트)
+```ts
+import Window from '@/bizMOB/Xross/Window';
+```
+- `openSignPad()` - 서명패드
+- `openCodeReader()` - QR/바코드 리더
+- `openFileExplorer()` - 파일 탐색기
+- `openImageViewer()` - 이미지 뷰어
+
+## 🤝 기여하기
+
+1. 프로젝트 Fork
+2. 기능 브랜치 생성 (`git checkout -b feature/새기능`)
+3. 변경사항 커밋 (`git commit -am '새 기능 추가'`)
+4. 브랜치에 Push (`git push origin feature/새기능`)
+5. Pull Request 생성
+
+## 📄 라이선스
+
+이 프로젝트는 [라이선스명]에 따라 라이선스가 부여됩니다.
+
+## 📞 지원
+
+- **문서**: [내부 문서 링크]
+- **이슈 리포팅**: [이슈 트래커 링크]
+- **개발팀 연락처**: [연락처 정보]
