@@ -30,56 +30,81 @@ graph TB
     subgraph "bizMOB MCP Ecosystem"
         MCP[🧠 bizMOB MCP Server<br/>Model Context Protocol]
         
-        subgraph "Data Sources"
-            DS1[🎨 Figma<br/>UI/UX Design]
-            DS2[🏗️ bizMOB Builder<br/>Interface Definition]
-            DS3[💻 bizMOB Developer<br/>RAG + GitHub]
+        subgraph LEFT["bizMOB Base - Input & Capabilities"]
+            subgraph "Data Sources"
+                DS1[🎨 Figma<br/>UI/UX Design]
+                DS2[🏗️ bizMOB Builder<br/>Interface Definition]
+                DS3[💻 bizMOB Developer<br/>RAG + GitHub]
+            end
+            
+            subgraph "Core Capabilities"
+                CC1[🤖 Code Generation]
+                CC2[🧪 Auto Testing]
+                CC3[📚 Documentation]
+                CC4[🚀 CI/CD Pipeline]
+            end
         end
         
-        subgraph "Development Environment"
-            DE1[🖥️ LLM Desktop<br/>Chat Interface]
-            DE2[⚡ IDE Integration<br/>VS Code, Cursor]
-            DE3[⌨️ CLI Tools<br/>Command Line]
-        end
-        
-        subgraph "LLM Services"
-            LS1[💼 Commercial LLMs<br/>ChatGPT, Claude, Gemini]
-            LS2[🌐 Open Source LLMs<br/>Qwen, DeepSeek, CLOVA X]
-        end
-        
-        subgraph "Core Capabilities"
-            CC1[🤖 Code Generation]
-            CC2[🧪 Auto Testing]
-            CC3[📚 Documentation]
-            CC4[🚀 CI/CD Pipeline]
+        subgraph RIGHT["AI Tools - Environment & Services"]
+            subgraph "Development Environment"
+                DE1[🖥️ LLM Desktop<br/>Chat Interface]
+                DE2[⚡ IDE Integration<br/>VS Code, Cursor]
+                DE3[⌨️ CLI Tools<br/>Command Line]
+            end
+            
+            subgraph "LLM Services"
+                LS1[💼 Commercial LLMs<br/>ChatGPT, Claude, Gemini]
+                LS2[🌐 Open Source LLMs<br/>Qwen, DeepSeek, CLOVA X]
+            end
         end
     end
     
+    %% Data Sources to MCP (Left to Center)
     DS1 --> MCP
     DS2 --> MCP
     DS3 --> MCP
     
+    %% MCP to Core Capabilities (Center to Left)
+    CC1 --> MCP
+    CC2 --> MCP
+    CC3 --> MCP
+    CC4 --> MCP
+    
+    %% MCP to Development Environment (Center to Right)
     MCP --> DE1
     MCP --> DE2
     MCP --> DE3
     
+    %% MCP to LLM Services (Center to Right)
     MCP --> LS1
     MCP --> LS2
     
-    MCP --> CC1
-    MCP --> CC2
-    MCP --> CC3
-    MCP --> CC4
+    %% Styling
+    style MCP fill:#8B5CF6,stroke:#5B21B6,stroke-width:4px,color:#fff
     
-    style MCP fill:#8B5CF6,stroke:#5B21B6,stroke-width:3px,color:#fff
+    %% Left Side - Data Sources (Blue theme)
     style DS1 fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
     style DS2 fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
     style DS3 fill:#06B6D4,stroke:#0891B2,stroke-width:2px,color:#fff
+    
+    %% Left Side - Core Capabilities (Green theme)
+    style CC1 fill:#10B981,stroke:#047857,stroke-width:2px,color:#fff
+    style CC2 fill:#10B981,stroke:#047857,stroke-width:2px,color:#fff
+    style CC3 fill:#10B981,stroke:#047857,stroke-width:2px,color:#fff
+    style CC4 fill:#10B981,stroke:#047857,stroke-width:2px,color:#fff
+    
+    %% Right Side - Development Environment (Orange theme)
     style DE1 fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
     style DE2 fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
     style DE3 fill:#F59E0B,stroke:#D97706,stroke-width:2px,color:#fff
+    
+    %% Right Side - LLM Services (Red theme)
     style LS1 fill:#EF4444,stroke:#B91C1C,stroke-width:2px,color:#fff
-    style LS2 fill:#10B981,stroke:#047857,stroke-width:2px,color:#fff
+    style LS2 fill:#EF4444,stroke:#B91C1C,stroke-width:2px,color:#fff
+    
+    %% Hide group borders
+    style LEFT fill:none,stroke:none
+    style RIGHT fill:none,stroke:none
 ```
 
 ---
